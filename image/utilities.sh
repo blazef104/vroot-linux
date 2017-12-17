@@ -26,7 +26,7 @@ cd libdnet-1.11
 ./configure && make && make install
 cd ..
 rm libdnet-1.11.tar.gz
-rm -rf libdnet-1.11.tar.gz
+rm -rf libdnet-1.11
 
 tar xvfz snort-2.9.11.tar.gz
 cd snort-2.9.11
@@ -36,3 +36,8 @@ rm snort-2.9.11.tar.gz
 rm -rf snort-2.9.11
 
 ln -s /usr/local/lib/libdnet.1.0.1 /usr/lib/libdnet.1
+
+mkdir /var/log/snort
+wget https://www.dropbox.com/s/q0d9xbfhxptnuje/local.rules --no-check-certificate
+wget https://www.dropbox.com/s/4wjlrm7uvozaai4/snortg.conf --no-check-certificate
+ldconfig
