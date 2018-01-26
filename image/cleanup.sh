@@ -4,6 +4,8 @@ source /build/buildconfig
 set -x
 
 apt-get clean
+apt-get remove bison g++ wget libpcap-dev make -y
+
 rm -rf /build
 rm -rf /tmp/* /var/tmp/*
 rm -rf /var/lib/apt/lists/*
